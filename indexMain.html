@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asfak</title>
+    <style>
+            @import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+       :root{
+            --nav-bar-color:#f00;
+            --background-primary:#000;
+            --background-secondary:#fff;
+            --spacing:23vh;
+        }
+        body{
+            background: var(--background-primary);
+            color: var(--background-secondary);
+            font-family: Montserrat,sans-serif;
+                }
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } 
+        header{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        ul{
+            list-style-type: none;
+            
+        }
+        a{
+            text-decoration: none;
+            color: rgba(255, 255, 255, .8);
+        }
+       
+        .nav-bar>li{
+            color: var(--background-secondary);
+            position: relative;
+            margin: 1.2em;
+            text-align: left;
+            /* font-size: .8em; */
+        }
+        .nav-bar>li>div::after{
+            content: '';
+            position: absolute;
+            background-color: var(--background-secondary);
+            top:-0.2em;
+            height: .125em;
+            width: 2em;            
+        }
+        .nav-bar>li.active>div::after{
+        background:var(--nav-bar-color) ;
+        }  
+        p{
+            font-size: .5em;
+        }
+            footer{
+                background-color: #6b6b6b;
+            }
+            .container{
+                margin: auto;
+                text-align: center;
+                padding: .8em 1.2em;
+            }
+            .hide-mobile{
+                display: none;
+            }
+            .logo{
+                width: 40px;
+            }
+            .toggler{
+                width: 20px;
+            }
+            .togglerLink{
+                z-index: 3000;
+            }
+            .addPart{
+                padding: var(--spacing) 0vh;
+            }
+            .bottom-container{
+                padding-bottom: var(--spacing);
+                display: flex;
+                flex-direction: column;
+            }
+            .btn-contact{
+                background-color: transparent;
+                border: 3px solid var(--nav-bar-color);
+            }
+            .bottom-container>.btn{
+                margin: .6em auto ;
+                width: 85%;
+                border-radius: 2em;
+                outline: none;
+                padding:.6em 0;
+                color: var(--background-secondary);
+            }
+            .btn-project{
+                background-color: var(--nav-bar-color);
+                font-weight: bold;
+                border: none;
+            }
+            .head{
+                padding: .5em;
+                font-weight: bold;
+                letter-spacing: 0.2em;
+                font-size: 1.3em;
+                
+            }
+            .contact-info{
+                line-height: 1.6em;
+            }
+            .nav-bar{
+
+                
+            /* padding: 2em 0;; */
+            }
+            header{
+
+            }
+            @media only screen and (max-width: 599px){
+                .nav-mob{
+            position: absolute;
+    right: 0em;
+    /* padding: 2em; */
+    color: #000;
+    width: 50vw;
+    background: #6b6b6b;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+        }
+        
+            }
+
+            @media only screen and (min-width: 600px){
+                .bottom-container>.btn{
+                    width:35%;
+                    margin: 0 2%;
+                }
+                .bottom-container
+                {
+                    max-width: 700px;
+                    margin: auto;
+                    display: block;
+                }
+                .hide-mobile{
+                    display: block;
+                }
+                .hide-desktop{
+                    display: none;
+                }
+                :root{
+                    --spacing:28vh;
+                }
+                .nav-bar{
+                    display: flex;
+                    font-size: .8em;
+                }
+            }
+           
+            @media only screen and (max-height: 300px){
+            :root{
+                --spacing:15vh;
+
+            }
+            @media only screen and (min-height: 301) and (max-height: 600px){
+            :root{
+                --spacing:20vh;
+
+            }
+            @media only screen and (min-height: 600px){
+            :root{
+                --spacing:25vh;
+
+            }
+
+    </style>
+</head>
+<body >
+    <div class="container">
+    <header>
+        <img class="logo" src="images/logo.svg"/>
+        <nav class="nav">
+            <a class="togglerLink hide-desktop" href="#"><img class="toggler" src="images/hamWhite.svg"></a>
+            <ul class="nav-bar nav-mob hide-mobile">
+                    <li id="close" class="togglerLink hide-desktop" style="cursor: pointer; text-align: right; color: #f00;font-weight: bold;">X</li>
+                    <li class="active"><div></div>Home</li>
+                    <li><div></div>About</li>
+                    <li><div></div>Projects</li>
+                    <li><div></div>Contact</li>
+            </ul>
+        </nav>
+   </header>
+   <section>
+       <div class="addPart">
+       <h4>I am Mohammed Asfak,</h4>
+       <h4>And I Try To Solve User Problems </h4>
+        <p>I am a Full Stack Developer</p>
+       </div>
+        <div class="bottom-container">
+            <button type="button" class="btn btn-project">Project</button>
+            <button type="button" class="btn btn-contact">Contact</button>
+        </div>
+   </section>
+   </div>
+   
+   <footer>
+    <div class="container">    
+    <!-- <img width="100%" src="images/footer.svg"/> -->
+    <div class="setup">
+        <div class="head">
+            Navigation
+        </div>
+        <ul class='contact-info'>
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Project</li></a>
+            <a href="#"><li>Contact</li></a>
+        </ul>
+    </div>
+    <div class="setup">
+        <div class="head">
+            Contact
+        </div>
+        <ul class='contact-info'>
+            <li>Mohammed Asfak</li>
+            <li>7200960868</li>
+            <li>asfak.mhmd274@gmail.com</li>
+            <li>No11/9 Dr. Vijayaragavalu Road,
+                Old Washermenpet,
+                Chennai-600021,
+                TamilNadu,
+                India. </li>
+        </ul>
+    </div>
+    <div class="setup">
+        <div class="head">
+            Social
+        </div>
+        <ul class='contact-info'>
+            <a href="#"><li>FaceBook</li></a>
+            <a href="#"><li>Instagram</li></a>
+            <a href="#"><li>LinkedIn</li></a>
+            <a href="#"><li>Twitter</li></a>
+        </ul>
+    </div>
+</div>    
+</footer>
+<script src="js/jquery-3.4.1.js"></script>
+<!-- <script src="js/jquery-ui.min.js"></script> -->
+<script>
+$(".togglerLink").click(function(){
+    // $('.nav-bar').toggle(300)
+    $(".nav-bar").animate({
+                width: "toggle"
+            },200);
+})    
+    // console.log(document.getElementsByClassName('head').innerHTML());
+</script>
+</body>
+</html>

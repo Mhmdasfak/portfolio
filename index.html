@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Baloo+Thambi+2|Roboto&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+ /* body *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ } */
+ body{
+    font-family:Montserrat;   
+    font-size: 12px;
+    /* background: linear-gradient(45deg,black,#aaa); */
+    /* background: url(""); */
+ }
+/* .navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    position: absolute;
+    right: 0%;
+    top: 0;
+    height: 100vw;
+    width: 40vw;
+    background: #f00;
+    list-style: none;
+} */
+
+/* .hamBurger{
+    width: 60px;
+    height: 60px;
+    color: black;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 3;
+} */
+/* .hamBurger>div{
+    position: relative;
+    background: black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 2px;
+    width: 100%;
+}
+.hamBurger>div::before,.hamBurger>div::after{
+    content: "";
+    position: absolute;
+    z-index: 1; 
+    height: 2px;
+    top: -10px;
+    width: 100%;
+    background: inherit;
+}
+.hamBurger>div::after{
+    top:10px;
+} */
+
+.fa{
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+    z-index: 2;
+    width: 1.5em;
+    height:1em;
+    display: flex;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    transition: all .1s ease-in-out;
+}
+/* .fa-times{
+    font-size: 1.5em;;
+} */
+.hamBurger>div{
+    position: relative;
+    width: 100%;
+    height: .125em;
+    z-index: 2;
+    background-color: #000;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    border-radius: .125em;
+}
+.hamBurger>div::before,.hamBurger>div::after{
+    content:'';
+    position: absolute;
+    z-index: 2; 
+    width: 100%;
+    top: .5em;
+    height: inherit;
+    border-radius: .125em;
+    background: inherit;
+}
+.hamBurger>div::after{
+    top: -.5em;
+}
+.fa:active{
+    transform: rotate(70deg);
+}
+.heroSection{
+    padding: 1.5em 0em 3em 0em;
+    color: rgb(255, 255, 255);
+}
+.heroSection p{
+    color: rgb(255, 255, 255);
+    font-size: 8px;
+}
+.card-holder::-webkit-scrollbar{
+    display: none;
+}
+/* .heroSection h4{
+    color: aliceblue;
+} */
+/* .imagesPage{
+    background: url("images/yuriy-bogdanov-uTXWIR_SviI-unsplash.jpg");
+} */
+.content{
+    /* background: linear-gradient(45deg,black,#aaa); */
+}
+</style>
+
+
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-md navbar-light" style="background: transparent;">
+            <a class="navbar-brand text-danger" href="#">Asfak</a>
+            <a href="#target" data-toggle="collapse" style="border:none;" class="navbar-toggler">
+            <!-- <img style="width: 25px;" src="../proj/restaurentTheame/images/images/ham1.svg">  -->
+         <div id="toggler" class="fa hamBurger">
+             <div></div>
+         </div>        
+            </a>
+            <div class="collapse navbar-collapse" id="target">
+                 <ul class="navbar-nav m-auto">
+                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>                    
+                     <li class="nav-item"><a class="nav-link" href="#">About Me</a></li>                    
+                     <li class="nav-item"><a class="nav-link" href="#">Contact Me</a></li>                    
+                 </ul>
+            </div>
+        </nav>
+        <div class="container content">
+
+        <div class="row heroSection">
+            <!-- <img src="images/yuriy-bogdanov-uTXWIR_SviI-unsplash.jpg" class="imagesPage img-fluid"/> -->
+            <div class="col-12 col-md-5">
+                <h4>I Create From Top To Bottom</h4>
+                <p>I am a FullStack Web Developer Who Can Create Websites And build API'S</p>
+                <p>Trying To Learn UI/UX</p>
+                <button type="button" class="btn btn-sm btn-outline-light">Projects</button>
+            </div>
+            <div class="col-12">
+                <div class="row card-holder flex-row flex-nowrap overflow-auto">
+                        <div class="col-11 col-md-6 col-lg-4">
+<div class="card">
+                          <img src="images/yuriy-bogdanov-uTXWIR_SviI-unsplash.jpg" class="card-img-top" alt="images/yuriy-bogdanov-uTXWIR_SviI-unsplash.jpg">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          </div>
+                          <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-11 col-md-5 col-lg-3">
+<div class="card">
+                          <img src="images/yuriy-bogdanov-uTXWIR_SviI-unsplash.jpg" class="card-img-top" alt="images/yuriy-bogdanov-uTXWIR_SviI-unsplash.jpg">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                          </div>
+                          <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                          </div>
+                        </div>
+                    </div>
+
+                        <div class="col-11 col-md-5 col-lg-3">
+<div class="card">
+                            <img src="images/yuriy-bogdanov-uTXWIR_SviI-unsplash.jpg" class="card-img-top" alt="images/yuriy-bogdanov-uTXWIR_SviI-unsplash.jpg">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            </div>
+                            <div class="card-footer">
+                              <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                          </div>
+                          </div>
+                          <div class="col-11 col-md-5 col-lg-3">
+                            <div class="card">
+                                                        <img src="images/yuriy-bogdanov-uTXWIR_SviI-unsplash.jpg" class="card-img-top" alt="...">
+                                                        <div class="card-body">
+                                                          <h5 class="card-title">Card title</h5>
+                                                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                          <small class="text-muted">Last updated 3 mins ago</small>
+                                                        </div>
+                                                      </div>
+                                                      </div>
+                                                      <div class="col-11 col-md-5 col-lg-3">
+                                                        <div class="card">
+                                                                                    <img src="..." class="card-img-top" alt="...">
+                                                                                    <div class="card-body">
+                                                                                      <h5 class="card-title">Card title</h5>
+                                                                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                                                                    </div>
+                                                                                    <div class="card-footer">
+                                                                                      <small class="text-muted">Last updated 3 mins ago</small>
+                                                                                    </div>
+                                                                                  </div>
+                                                                                  </div>
+                                                                                  <div class="col-11 col-md-5 col-lg-3">
+                                                                                    <div class="card">
+                                                                                                                <img src="..." class="card-img-top" alt="...">
+                                                                                                                <div class="card-body">
+                                                                                                                  <h5 class="card-title">Card title</h5>
+                                                                                                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                                                                                                </div>
+                                                                                                                <div class="card-footer">
+                                                                                                                  <small class="text-muted">Last updated 3 mins ago</small>
+                                                                                                                </div>
+                                                                                                              </div>
+                                                                                                              </div>
+                                                                                                              <div class="col-11 col-md-5 col-lg-3">
+                                                                                                                <div class="card">
+                                                                                                                                            <img src="..." class="card-img-top" alt="...">
+                                                                                                                                            <div class="card-body">
+                                                                                                                                              <h5 class="card-title">Card title</h5>
+                                                                                                                                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="card-footer">
+                                                                                                                                              <small class="text-muted">Last updated 3 mins ago</small>
+                                                                                                                                            </div>
+                                                                                                                                          </div>
+                                                                                                                                          </div>
+<div class="col-11 col-md-5 col-lg-3">
+<div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            </div>
+                            <div class="card-footer">
+                              <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                          </div>
+                      </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        $("#toggler").click(function(){
+            $(this).toggleClass('hamBurger')
+            $(this).toggleClass('fa-times-circle')
+        })
+    </script>
+</body>
+</html>
