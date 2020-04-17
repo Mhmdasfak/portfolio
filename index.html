@@ -185,7 +185,6 @@
         url: 'data.csv',
         success: function(data) {
             console.log(data);
-            $("#finder").text(data);
             getCsv(data);
         }
 });
@@ -194,6 +193,29 @@
         {
             var data=Papa.parse(data);
             console.log(data)
+             var myChart = Highcharts.chart('finder', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Fruit Consumption'
+            },
+            xAxis: {
+                categories: ['Apples', 'Bananas', 'Oranges']
+            },
+            yAxis: {
+                title: {
+                    text: 'Fruit eaten'
+                }
+            },
+            series: [{
+                name: 'Jane',
+                data: [1, 0, 4]
+            }, {
+                name: 'John',
+                data: [5, 7, 3]
+            }]
+        });
         }
     </script>
 </body>
