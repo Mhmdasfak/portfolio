@@ -186,21 +186,15 @@
         success: function(data) {
             console.log(data);
             $("#finder").text(data);
+            getCsv(data);
         }
-
-// $.ajax({
-// type: "GET",
-// url: "data.csv",
-// dataType: "text",
-
-// success: function(data) {
-// // processData(data);
-// console.log(data);
-// }
-// });
-
 });
 });
+   function getCsv(data)
+        {
+            var data=Papa.parse(data);
+            console.log(data)
+        }
     </script>
 </body>
 </html>
