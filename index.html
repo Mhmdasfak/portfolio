@@ -191,6 +191,8 @@
    function getCsv(data)
         {
             var data=Papa.parse(data);
+            
+            console.log(data);
              var myChart = Highcharts.chart('finder', {
             chart: {
                 type: 'bar'
